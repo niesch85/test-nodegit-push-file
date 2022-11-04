@@ -1,4 +1,14 @@
 const { exec } = require('child_process');
+const fs = require('fs');
+
+//current folder path
+console.log(__dirname);
+
+// File destination.txt will be created or overwritten by default.
+/* fs.copyFile('source.txt', 'destination.txt', (err) => {
+  if (err) throw err;
+  console.log('source.txt was copied to destination.txt');
+}); */
 
 var d = new Date,
     dformat = [d.getDate(),
