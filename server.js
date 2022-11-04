@@ -5,8 +5,7 @@ var d = new Date,
     d.getMonth() + 1,
     d.getFullYear()].join('.') + ' ' +
         [d.getHours(),
-        d.getMinutes(),
-        d.getSeconds()].join(':');
+        d.getMinutes()].join(':');
 
 const comment = "update db.json " + dformat
 executeGitCommands();
