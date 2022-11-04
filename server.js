@@ -1,6 +1,14 @@
 const { exec } = require('child_process');
 
-const comment = "update db.json 04.11.22"
+var d = new Date,
+    dformat = [d.getMonth() + 1,
+    d.getDate(),
+    d.getFullYear()].join('/') + ' ' +
+        [d.getHours(),
+        d.getMinutes(),
+        d.getSeconds()].join(':');
+
+const comment = "update db.json" + dformat
 executeGitCommands();
 
 async function executeGitCommands() {
