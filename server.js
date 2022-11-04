@@ -1,14 +1,17 @@
 const { exec } = require('child_process');
 const fs = require('fs');
 
+const source = "/Users/nboewer/REPOS/nodejs/cyclic/cyclic-server-json-annis-leckereien/db.json";
+const destination = "/Users/nboewer/REPOS/nodejs/nodegit/test-nodegit-push-file/db.json"
+
 //current folder path
 console.log(__dirname);
 
 // File destination.txt will be created or overwritten by default.
-/* fs.copyFile('source.txt', 'destination.txt', (err) => {
-  if (err) throw err;
-  console.log('source.txt was copied to destination.txt');
-}); */
+fs.copyFile(source, destination, (err) => {
+    if (err) throw err;
+    console.log('db.json was copied to destination');
+});
 
 var d = new Date,
     dformat = [d.getDate(),
